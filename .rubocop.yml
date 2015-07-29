@@ -1,6 +1,7 @@
 AllCops:
   RunRailsCops: true
   Exclude:
+    - 'vendor/**/*'
     - 'bin/**/*'
     - 'test/test_helper.rb'
     - 'Guardfile'
