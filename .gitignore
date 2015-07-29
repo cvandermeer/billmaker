@@ -16,8 +16,5 @@
 !/log/.keep
 /tmp
 
-# Ignore rubocop
-.rubocop.yml
-
 # Ignore simplecov
 coverage

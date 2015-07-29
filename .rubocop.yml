@@ -1,0 +1,10 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'test/test_helper.rb'
+    - 'Guardfile'
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
