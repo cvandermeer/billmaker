@@ -1,1 +1,1 @@
-$(document).on 'ready page:load', ->
+$(document).ready ->
