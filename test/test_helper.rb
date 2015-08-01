@@ -1,5 +1,6 @@
 require 'simplecov'
 SimpleCov.start 'rails'
+SimpleCov.command_name 'Unit Tests'
 require "minitest/reporters"
 Minitest::Reporters.use!
 
