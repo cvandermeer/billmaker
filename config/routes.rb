@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'static_pages#index'
+  root 'bills#new'
+  resources :bills, only: [:show, :create, :update]
 end
