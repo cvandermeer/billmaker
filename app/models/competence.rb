@@ -17,6 +17,12 @@ class Competence < ActiveRecord::Base
   ### ASSOCIATIONS ###
   belongs_to :bill
 
+  ### VALIDATIONS ###
+  validates :title_id, presence: true
+  validates :level_id, presence: true
+  validates :points, presence: true
+  validates :bill_id, presence: true
+
   ### METHODS ###
   def title
     if title_id == RESEARCH_AND_INNOVATION
