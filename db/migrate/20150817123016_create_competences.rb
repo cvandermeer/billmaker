@@ -1,9 +1,9 @@
 class CreateCompetences < ActiveRecord::Migration
   def change
     create_table :competences do |t|
-      t.integer :title_id
+      t.string :title
       t.integer :points
-      t.integer :level_id
+      t.string :level
       t.integer :bill_id
     end
   end

@@ -7,6 +7,6 @@ class CompetencesController < ApplicationController
   private
 
   def competence_params
-    params.require(:competence).permit(:title_id, :points, :level_id, :bill_id)
+    params.require(:competence).permit(:title, :points, :level, :bill_id)
   end
 end
