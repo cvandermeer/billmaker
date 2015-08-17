@@ -12,17 +12,23 @@ class VisitorFlowTest < ActionDispatch::IntegrationTest
     visit('/')
     fill_in('bill_name', with: @bill.name)
     click_button 'Start'
-    page.has_selector?('#name')
+    assert_selector '#name', text: @bill.name
     fill_in('bill_period', with: @bill.period)
     fill_in('bill_groupname', with: @bill.groupname)
     click_button 'Rekening updaten'
-    page.has_selector?('#period')
-    page.has_selector?('#groupname')
+    assert_selector '#period', text: @bill.period
+    assert_selector '#groupname', text: @bill.groupname
+    select('Concepting', from: 'competence_title_id')
+    select(6, from: 'competence_points')
+    select('Gevorderd', from: 'competence_level_id')
+    click_button 'Competentie toevoegen'
+    assert_selector '.competence', text: 'Concepting 6 Gevorderd'
   end
 
   private
 
   def initialize_bill
     @bill = bills(:bill1)
+    @competence = competences(:competence1)
   end
 end

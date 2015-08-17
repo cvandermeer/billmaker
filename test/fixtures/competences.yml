@@ -2,4 +2,4 @@ competence1:
   title_id: 1
   points: 3
   level_id: 1
-  bill_id: 1
+  bill: bill1
