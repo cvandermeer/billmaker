@@ -2,6 +2,7 @@ class BillsController < ApplicationController
   before_action :set_bill, only: [:show, :update]
 
   def show
+    @competence = Competence.new
   end
 
   def new

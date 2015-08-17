@@ -11,3 +11,10 @@
     <p><%= f.submit %></p>
   <% end %>
 <% end %>
+
+<p>Competenties</p>
+<%= form_for @competence do |f| %>
+  <p><%= f.text_field :title %></p>
+  <p><%= f.number_field :points %></p>
+  <p><%= f.number_field :level %></p>
+<% end %>
