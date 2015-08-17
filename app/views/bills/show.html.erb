@@ -13,20 +13,22 @@
 <% end %>
 
 <p>Competenties</p>
-<% @bill.competences.each do |competence| %>
-  <p>
-    <%= competence.title %>
-    <%= competence.points %>
-    <%= competence.level %>
-  </p>
-<% end %>
+<div class='competences'>
+  <% @bill.competences.each do |competence| %>
+    <p>
+      <%= competence.title %>
+      <%= competence.points %>
+      <%= competence.level %>
+    </p>
+  <% end %>
+</div>
 
 <%= form_for Competence.new, remote: true do |f| %>
   <%= f.hidden_field :bill_id, value: @bill.id %>
   <%= f.select :title_id, Competence::competences %>
   <%= f.select :points, Competence::point_options %>
   <%= f.select :level_id, Competence::levels %>
-  <%= f.submit 'Compentie toevoegen' %>
+  <%= f.submit 'Compentie toevoegen', data: { disable_with: 'Competentie toevoegen...' } %>
 <% end %>
 
 
