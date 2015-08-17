@@ -12,7 +12,7 @@ class Competence < ActiveRecord::Base
                       'Sharing',
                       'Growth & Reflection']
   self.points_options = [3, 6, 9, 12]
-  self.levels = ['Basis', 'Gevorderd', 'Expert']
+  self.levels = %w(Basis Gevorderd Expert)
 
   ### ASSOCIATIONS ###
   belongs_to :bill
