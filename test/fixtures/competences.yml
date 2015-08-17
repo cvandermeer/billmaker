@@ -1,5 +1,17 @@
 competence1:
+  title_id: 0
+  points: 3
+  level_id: 0
+  bill: bill1
+
+competence2:
   title_id: 1
   points: 3
   level_id: 1
+  bill: bill1
+
+competence3:
+  title_id: 1
+  points: 3
+  level_id: 2
   bill: bill1
