@@ -39,6 +39,14 @@ class CompetenceTest < ActiveSupport::TestCase
   test 'should return title name' do
     assert_equal @competence1.title, 'Research & Innovation'
     assert_equal @competence2.title, 'Concepting'
+    assert_equal @competence3.title, 'Multimedia Design'
+    assert_equal @competence4.title, 'Multimedia Production'
+    assert_equal @competence5.title, 'Quality Monitoring & Implementation'
+    assert_equal @competence6.title, 'Multidisciplinary Teamwork'
+    assert_equal @competence7.title, 'Communication'
+    assert_equal @competence8.title, 'Project Management'
+    assert_equal @competence9.title, 'Sharing'
+    assert_equal @competence10.title, 'Growth & Reflection'
   end
 
   test 'should return level name' do
@@ -53,5 +61,12 @@ class CompetenceTest < ActiveSupport::TestCase
     @competence1 = competences(:competence1)
     @competence2 = competences(:competence2)
     @competence3 = competences(:competence3)
+    @competence4 = competences(:competence4)
+    @competence5 = competences(:competence5)
+    @competence6 = competences(:competence6)
+    @competence7 = competences(:competence7)
+    @competence8 = competences(:competence8)
+    @competence9 = competences(:competence9)
+    @competence10 = competences(:competence10)
   end
 end

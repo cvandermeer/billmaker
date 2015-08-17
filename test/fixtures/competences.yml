@@ -11,7 +11,49 @@ competence2:
   bill: bill1
 
 competence3:
-  title_id: 1
+  title_id: 2
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence4:
+  title_id: 3
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence5:
+  title_id: 4
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence6:
+  title_id: 5
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence7:
+  title_id: 6
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence8:
+  title_id: 7
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence9:
+  title_id: 8
+  points: 3
+  level_id: 2
+  bill: bill1
+
+competence10:
+  title_id: 9
   points: 3
   level_id: 2
   bill: bill1
