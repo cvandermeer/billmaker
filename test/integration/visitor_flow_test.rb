@@ -11,18 +11,24 @@ class VisitorFlowTest < ActionDispatch::IntegrationTest
   test 'should create and update bill' do
     visit('/')
     fill_in('bill_name', with: @bill.name)
-    click_button 'Create Bill'
-    page.has_selector?('#name')
+    click_button 'Start'
+    assert_selector '#name', text: @bill.name
     fill_in('bill_period', with: @bill.period)
     fill_in('bill_groupname', with: @bill.groupname)
-    click_button 'Update Bill'
-    page.has_selector?('#period')
-    page.has_selector?('#groupname')
+    click_button 'Rekening updaten'
+    assert_selector '#period', text: @bill.period
+    assert_selector '#groupname', text: @bill.groupname
+    select('Concepting', from: 'competence_title_id')
+    select(6, from: 'competence_points')
+    select('Gevorderd', from: 'competence_level_id')
+    click_button 'Competentie toevoegen'
+    assert_selector '.competence', text: 'Concepting 6 Gevorderd'
   end
 
   private
 
   def initialize_bill
     @bill = bills(:bill1)
+    @competence = competences(:competence1)
   end
 end

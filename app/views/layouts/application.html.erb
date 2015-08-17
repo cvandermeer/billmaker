@@ -7,11 +7,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <header>
+      Rekening Maker <%= BillMaker::VERSION %>
+    </header>
     <p class='notice'><%= notice %></p>
     <p class='alert'><%= alert %></p>
     <%= yield %>
-    <footer>
-      Rekening Maker <%= BillMaker::VERSION %>
-    </footer>
   </body>
 </html>
