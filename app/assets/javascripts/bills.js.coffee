@@ -1,4 +1,4 @@
-$(document).ready ->
+$ ->
   $('#bill_name').focus()
   $('#bill_period').focus()
   $('.edit_bill').on('ajax:success', (e, data, status, xhr) ->
