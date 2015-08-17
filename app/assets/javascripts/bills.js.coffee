@@ -6,4 +6,3 @@ $(document).ready ->
     $('.edit_bill').hide()
   ).on 'ajax:error', (e, xhr, status, error) ->
     $('.edit_bill').append '<p>Vul alle waarden in!</p>'
-

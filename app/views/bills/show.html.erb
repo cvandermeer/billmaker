@@ -16,15 +16,16 @@
 <% @bill.competences.each do |competence| %>
   <p>
     <%= competence.title %>
-    <%= competence.level %>
     <%= competence.points %>
+    <%= competence.level %>
   </p>
 <% end %>
 
-<%= form_for @competence do |f| %>
+<%= form_for [@bill, Competence.new], remote: true do |f| %>
   <%= f.select :title_id, Competence::competences %>
-  <%= f.select :level_id, Competence::levels %>
   <%= f.select :points, Competence::point_options %>
-  <%= f.hidden_field(:bill_id, value: params[:id]) %>
+  <%= f.select :level_id, Competence::levels %>
   <%= f.submit 'Compentie toevoegen' %>
 <% end %>
+
+
