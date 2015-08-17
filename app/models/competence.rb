@@ -42,27 +42,16 @@ class Competence < ActiveRecord::Base
 
   ### METHODS ###
   def title
-    if title_id == RESEARCH_AND_INNOVATION
-      return 'Research & Innovation'
-    elsif title_id == CONCEPTING
-      return 'Concepting'
-    elsif title_id == MULTIMEDIA_DESIGN
-      return 'Multimedia Design'
-    elsif title_id == MULTIMEDIA_PRODUCTION
-      return 'Multimedia Production'
-    elsif title_id == QUALITY_MONITORING_AND_IMPLEMENTATION
-      return 'Quality Monitoring & Implementation'
-    elsif title_id == MULTIDICIPLINARY_TEAMWORK
-      return 'Multidisciplinary Teamwork'
-    elsif title_id == COMMUNICATION
-      return 'Communication'
-    elsif title_id == PROJECT_MANAGEMENT
-      return 'Project Management'
-    elsif title_id == SHARING
-      return 'Sharing'
-    elsif title_id == GROWTH_AND_REFLECTION
-      return 'Growth & Reflection'
-    end
+    return 'Research & Innovation' if title_id == RESEARCH_AND_INNOVATION
+    return 'Concepting' if title_id == CONCEPTING
+    return 'Multimedia Design' if title_id == MULTIMEDIA_DESIGN
+    return 'Multimedia Production' if title_id == MULTIMEDIA_PRODUCTION
+    return 'Quality Monitoring & Implementation' if title_id == QUALITY_MONITORING_AND_IMPLEMENTATION
+    return 'Multidisciplinary Teamwork' if title_id == MULTIDICIPLINARY_TEAMWORK
+    return 'Communication' if title_id == COMMUNICATION
+    return 'Project Management' if title_id == PROJECT_MANAGEMENT
+    return 'Sharing' if title_id == SHARING
+    return 'Growth & Reflection' if title_id == GROWTH_AND_REFLECTION
   end
 
   def level
