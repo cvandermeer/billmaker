@@ -9,8 +9,8 @@ class CompetencesControllerTest < ActionController::TestCase
 
   test 'should create competence' do
     assert_difference('Competence.count') do
-      post :create, competence: { title_id: @competence.title_id,
-                                  level_id: @competence.level_id,
+      post :create, competence: { title: @competence.title,
+                                  level: @competence.level,
                                   points: @competence.points,
                                   bill_id: @competence.bill }
     end
