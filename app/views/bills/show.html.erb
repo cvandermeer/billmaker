@@ -6,15 +6,25 @@
 
 <% if !(@bill.groupname && @bill.period) %>
   <%= form_for(@bill, remote: true) do |f| %>
-    <p><%= f.text_field :period %></p>
-    <p><%= f.text_field :groupname %></p>
+    <p><%= f.text_field :period, placeholder: 'Periode' %></p>
+    <p><%= f.text_field :groupname, placeholder: 'Groepsnaam' %></p>
     <p><%= f.submit %></p>
   <% end %>
 <% end %>
 
 <p>Competenties</p>
+<% @bill.competences.each do |competence| %>
+  <p>
+    <%= competence.title %>
+    <%= competence.level %>
+    <%= competence.points %>
+  </p>
+<% end %>
+
 <%= form_for @competence do |f| %>
-  <p><%= f.text_field :title %></p>
-  <p><%= f.number_field :points %></p>
-  <p><%= f.number_field :level %></p>
+  <%= f.select :title_id, Competence::competences %>
+  <%= f.select :level_id, Competence::levels %>
+  <%= f.select :points, Competence::point_options %>
+  <%= f.hidden_field(:bill_id, value: params[:id]) %>
+  <%= f.submit 'Compentie toevoegen' %>
 <% end %>

@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(version: 20150817123016) do
   end
 
   create_table "competences", force: :cascade do |t|
-    t.string  "title"
+    t.integer "title_id"
     t.integer "points"
-    t.integer "level"
+    t.integer "level_id"
+    t.integer "bill_id"
   end
 
 end
