@@ -1,7 +1,7 @@
 class CompetencesController < ApplicationController
   def create
     @competence = Competence.new(competence_params)
-    render @competence if @competence.save
+    render @competence, bill: @bill if @competence.save
   end
 
   private
