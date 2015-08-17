@@ -1,7 +1,7 @@
 class CompetencesController < ApplicationController
   def create
     competence = Bill.find(params[:bill_id]).competences.create(competence_params)
-    render json: comment
+    render json: competence
   end
 
   private
