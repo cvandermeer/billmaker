@@ -11,11 +11,11 @@ class VisitorFlowTest < ActionDispatch::IntegrationTest
   test 'should create and update bill' do
     visit('/')
     fill_in('bill_name', with: @bill.name)
-    click_button 'Create Bill'
+    click_button 'Start'
     page.has_selector?('#name')
     fill_in('bill_period', with: @bill.period)
     fill_in('bill_groupname', with: @bill.groupname)
-    click_button 'Update Bill'
+    click_button 'Rekening updaten'
     page.has_selector?('#period')
     page.has_selector?('#groupname')
   end
