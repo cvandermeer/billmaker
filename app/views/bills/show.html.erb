@@ -12,7 +12,7 @@
   <% end %>
 <% end %>
 
-<p>Competenties</p>
+<p>Competenties:</p>
 <div class='competences'>
   <% @bill.competences.each do |competence| %>
     <p>
@@ -23,4 +23,4 @@
   <% end %>
 </div>
 
-<%= render "competences/form" %>
+<%= render "competences/form", bill: @bill %>

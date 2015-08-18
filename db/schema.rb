@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817123016) do
+ActiveRecord::Schema.define(version: 20150817211621) do
 
   create_table "bills", force: :cascade do |t|
     t.string   "name"
@@ -22,10 +22,12 @@ ActiveRecord::Schema.define(version: 20150817123016) do
   end
 
   create_table "competences", force: :cascade do |t|
-    t.integer "title_id"
+    t.string  "title"
     t.integer "points"
-    t.integer "level_id"
+    t.string  "level"
     t.integer "bill_id"
   end
+
+  add_index "competences", ["bill_id"], name: "index_competences_on_bill_id"
 
 end

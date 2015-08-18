@@ -18,9 +18,9 @@ class VisitorFlowTest < ActionDispatch::IntegrationTest
     click_button 'Rekening updaten'
     assert_selector '#period', text: @bill.period
     assert_selector '#groupname', text: @bill.groupname
-    select('Concepting', from: 'competence_title_id')
+    select('Concepting', from: 'competence_title')
     select(6, from: 'competence_points')
-    select('Gevorderd', from: 'competence_level_id')
+    select('Gevorderd', from: 'competence_level')
     click_button 'Competentie toevoegen'
     assert_selector '.competence', text: 'Concepting 6 Gevorderd'
   end
@@ -29,6 +29,5 @@ class VisitorFlowTest < ActionDispatch::IntegrationTest
 
   def initialize_bill
     @bill = bills(:bill1)
-    @competence = competences(:competence1)
   end
 end
